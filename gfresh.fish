@@ -1,5 +1,7 @@
 function gfresh
     if test -d .git
+        echo (set_color green)===(basename $PWD)===(set_color normal) >&2
+
         set stashed false
         set current (git rev-parse --abbrev-ref HEAD)
 
