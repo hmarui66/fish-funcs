@@ -5,16 +5,14 @@ function grec
             continue
         end
         cd $D
-        if test -d .git
-            switch $argv[1]
-                case current
-                    gcurrent
-                case fresh
-                    gfresh
-                case gogen
-                    gogen
-            end
+        set cmd $argv
+        switch $cmd[1]
+            case current
+                set cmd gcurrent
+            case fresh
+                set cmd gfresh
         end
+        eval $cmd
     end
     popd
 end
