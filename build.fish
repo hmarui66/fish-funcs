@@ -1,3 +1,3 @@
-function gobuild
+function build
     go build
 end
