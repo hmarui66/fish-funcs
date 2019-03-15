@@ -1,3 +1,3 @@
 function build
-    go build
+    go build -i
 end
