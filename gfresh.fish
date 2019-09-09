@@ -12,7 +12,9 @@ function gfresh
             set stashed true
         end
 
-        git co develop
+        set dev_branch develop
+        git rev-parse $dev_branch >/dev/null 2>&1; or set dev_branch master
+        git co $dev_branch
         git pull; and gprune; and gdel
         git co $current
 
